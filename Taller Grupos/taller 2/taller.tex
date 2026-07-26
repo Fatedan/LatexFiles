@@ -78,6 +78,97 @@
       \]
 
   \pagebreak
+  \section{punto 2} 
+  \begin{tikzpicture}[scale=1]
+    
+    \def\sqrtsix{2.44949}
+
+    
+    \foreach \a in {-12,...,12} {
+        \draw[gray!30, thin] (\a, -5*\sqrtsix) -- (\a, 5*\sqrtsix);
+    }
+    \foreach \b in {-5,...,5} {
+        \draw[gray!30, thin] (-12, \b*\sqrtsix) -- (12, \b*\sqrtsix);
+    }
+    \draw[->, thick] (-12.5, 0) -- (12.5, 0) node[right] {Re};
+    \draw[->, thick] (0, -13) -- (0, 13) node[above] {Im};
+
+    
+    \foreach \a in {-12,...,12} {
+        \foreach \b in {-5,...,5} {
+            \fill[gray] (\a, \b*\sqrtsix) circle (2pt);
+        }
+    }
+
+    
+    \foreach \a/\b in {1/0, -1/0} {
+        \fill[white] (\a, \b*\sqrtsix) circle (3.5pt);
+        \draw[black] (\a, \b*\sqrtsix) circle (3.5pt);
+    }
+
+
+    \foreach \a/\b in {2/0, -2/0, 0/1, 0/-1} { 
+        \fill[red] (\a, \b*\sqrtsix) circle (3.5pt);
+    } 
+    \draw[thick, red, dashed] (0,0) circle (2cm);
+    \draw[thick, red, dashed] (0,0) circle (2.449cm);
+    
+    \foreach \a/\b in {5/0, -5/0, 1/2, -1/2, 1/-2, -1/-2} { 
+        \fill[red] (\a, \b*\sqrtsix) circle (3.5pt);
+    }
+    \draw[thick, red, dashed] (0,0) circle (5cm);
+    
+   
+    \foreach \a/\b in {11/0, -11/0, 5/4, -5/4, 5/-4, -5/-4} {
+        \fill[red] (\a, \b*\sqrtsix) circle (3.5pt);
+    }
+    \draw[thick, red, dashed] (0,0) circle (11cm);
+
+    
+    \draw[thick, red, dashed] (0,0) circle (7.416cm);
+    
+    \draw[thick, red, dashed] (0,0) circle (12.041cm);
+
+    
+    \foreach \a/\b in {
+        3/0, -3/0,                                     
+        2/1, -2/1, 2/-1, -2/-1,                        
+        3/1, -3/1, 3/-1, -3/-1,                        
+        4/1, -4/1, 4/-1, -4/-1,                        
+        7/1, -7/1, 7/-1, -7/-1,                        
+        1/3, -1/3, 1/-3, -1/-3,                        
+        9/1, -9/1, 9/-1, -9/-1,                        
+        10/1, -10/1, 10/-1, -10/-1,                    
+        3/2, -3/2, 3/-2, -3/-2,                        
+        11/2, -11/2, 11/-2, -11/-2,                    
+        7/4, -7/4, 7/-4, -7/-4,                        
+        2/3, -2/3, 2/-3, -2/-3,                        
+        8/3, -8/3, 8/-3, -8/-3,                        
+        9/4, -9/4, 9/-4, -9/-4,                        
+        3/5, -3/5, 3/-5, -3/-5,                        
+        4/5, -4/5, 4/-5, -4/-5,                        
+        8/5, -8/5, 8/-5, -8/-5                         
+    } {
+        \fill[red] (\a, \b*\sqrtsix) circle (3.5pt);
+    }
+    
+    \foreach \a/\b in {
+        1/1, -1/1, 1/-1, -1/-1,                         
+        5/1, -5/1, 5/-1, -5/-1,                        
+        7/2, -7/2, 7/-2, -7/-2,                        
+        5/3, -5/3, 5/-3, -5/-3,                        
+        1/4, -1/4, 1/-4, -1/-4,                        
+        7/3, -7/3, 7/-3, -7/-3,                        
+        11/1, -11/1, 11/-1, -11/-1,                    
+        1/5, -1/5, 1/-5, -1/-5,                        
+        7/5, -7/5, 7/-5, -7/-5,                        
+        11/5, -11/5, 11/-5, -11/-5                     
+    } {
+        \fill[black] (\a, \b*\sqrtsix) circle (3.5pt);
+    }
+
+\end{tikzpicture}
+\pagebreak
 
   \section{Punto 3}
 
